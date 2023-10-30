@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #000002;
+  color: #d4c3bb;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 50%;
+  background-color: #131222;
+  overflow-y: auto;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 1rem auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #d4c3bb;
+}
+
+p {
+  font-size: max(1.75vw, 1rem);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.background {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.background-fade {
+  position: absolute;
+  height: 100%;
+  width: 35vw;
+  top: 0;
+  right: -0.0625rem;
+  background-image: linear-gradient(to left, #131222, rgba(0, 0, 0, 0));
+}
+
+.main-portrait {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.phone, .email {
+  width: 50%;
+}
+
+.email {
+  text-align: right;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
