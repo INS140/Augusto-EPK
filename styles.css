@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   background-color: #000002;
   color: #d4c3bb;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 main {
@@ -24,7 +25,7 @@ header {
 
 h1 {
   font-size: 4rem;
-  margin: 1rem auto;
+  margin: auto;
 }
 
 h2 {
@@ -34,13 +35,17 @@ h2 {
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   padding-top: 1.25rem;
 }
 
-a {
-  text-decoration: none;
+button {
   color: #d4c3bb;
+  background-color: #131222;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
 }
 
 p {
@@ -85,8 +90,11 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.page-content {
-  height: 100%;
+.outlet {
+  padding: 0.5rem;
+}
+
+.about {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -100,6 +108,40 @@ footer {
 
 .places {
   font-size: max(1.5vw, 1rem);
+}
+
+.photos {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: auto;
+}
+
+.photo1, .photo2, .photo3, .photo4, .photo5 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.photo1 {
+  grid-area: 1 / 2 / span 3;
+}
+
+.photo2 {
+  grid-area: 1 / 1;
+}
+
+.photo3 {
+  grid-area: 1 / 3 / span 2;
+}
+
+.photo4 {
+  grid-area: 2 / 1 / span 2;
+}
+
+.photo5 {
+  grid-area: 3 / 3;
 }
 
 .phone, .email {
