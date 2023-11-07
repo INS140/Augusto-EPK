@@ -40,9 +40,7 @@ const photosPage = `
 `
 
 const videosPage = `
-  <video>
-    <source src="" type="" />
-  </video>
+  
 `
 
 // Initial Setup

@@ -2,8 +2,6 @@ body {
   margin: 0;
   display: flex;
   height: 100vh;
-  overflow-y: hidden;
-  overflow-x: hidden;
   background-color: #000002;
   color: #d4c3bb;
   font-family: 'Times New Roman', Times, serif;
@@ -16,7 +14,7 @@ main {
   padding: 0.5rem;
   width: 50%;
   background-color: #131222;
-  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 header {
@@ -76,7 +74,6 @@ footer {
   position: absolute;
   height: 100%;
   width: 35vw;
-  top: 0;
   right: -0.0625rem;
   background-image: linear-gradient(to left, #131222, rgba(0, 0, 0, 0));
 }
@@ -157,4 +154,80 @@ footer {
   justify-content: center;
   gap: 0.5rem;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+    overflow-y: auto;
+  }
+  
+  main {
+    width: 100%;
+    min-height: 55vh;
+  }
+  
+  header {
+    background-color: #131222;
+    position: sticky;
+    top: 0;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .background {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    overflow-y: hidden;
+  }
+  
+  .background-fade {
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to top, #131222, rgba(0, 0, 0, 0));
+  }
+  
+  .main-portrait {
+    height: 50vh;
+    max-height: none;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .photos {
+    display: grid;
+    grid: repeat(3, auto) / repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .photo1 {
+    grid-area: 1 / 2 / span 2;
+  }
+  
+  .photo2 {
+    grid-area: 1 / 1;
+  }
+  
+  .photo3 {
+    grid-area: 3 / 1;
+  }
+  
+  .photo4 {
+    grid-area: 3 / 2;
+  }
+  
+  .photo5 {
+    grid-area: 2 / 1;
+  }
 }
