@@ -15,6 +15,7 @@ main {
   width: 50%;
   background-color: #131222;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
@@ -141,8 +142,39 @@ footer {
   grid-area: 3 / 3;
 }
 
-.phone, .email {
-  width: 50%;
+.videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  video {
+    height: 50vh;
+    background-color: #000002;
+    align-self: center;
+  }
+}
+
+.video-select {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: min-content;
+  overflow-x: auto;
+  box-sizing: border-box;
+
+  button {
+    width: min-content;
+  }
+
+  img {
+    width: auto;
+    height: 6rem;
+  }
+}
+
+.phone {
+  flex-grow: 1;
 }
 
 .email {
@@ -165,12 +197,6 @@ footer {
   main {
     width: 100%;
     min-height: 55vh;
-  }
-  
-  header {
-    background-color: #131222;
-    position: sticky;
-    top: 0;
   }
 
   footer {
