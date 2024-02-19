@@ -103,7 +103,7 @@ const resourcesPage = `
     </div>
     <div class="download-link">
       <img src="./images/Hey_by_If_Anything_Cover_Img.jpg" alt="Hey by If Anything" />
-      <a href="./videos/Hey_by_If_Anything.mp4" download>Hey_by_If_Anything.mp4</a>
+      <a href="./videos/Hey_by_If_Anything.mp4" download>test</a>
     </div>
   </div>
 `
