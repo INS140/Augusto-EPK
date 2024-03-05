@@ -42,6 +42,7 @@ const photosPage = `
 `
 
 const videosPage = `
+  <h2 id="title"></h2>
   <div id="video">
     <video width="200" height="200" controls><source src="./videos/Be_Mine.mp4" type="video/mp4" /></video>
   </div>
@@ -129,14 +130,27 @@ videos.addEventListener("click", () => {
   outlet.innerHTML = videosPage
   outlet.classList = 'outlet videos'
 
+  const title = document.getElementById("title")
   const video = document.getElementById("video")
   const buttons = document.querySelectorAll(".videos button")
 
-  const videoArray = ["Be_Mine.mp4", "Spencer_Couture.MP4", "Hey_by_If_Anything.mp4", "Fun_On_Stage.MP4", "Sublime_Cover_Santeria.MP4"]
+  if (window.innerWidth <= 600) {
+    title.innerHTML = "Be Mine"
+    title.style = "display: block;"
+  }
+
+  const videoArray = [
+    {title: "Be Mine", file: "Be_Mine.mp4"},
+    {title: "Spencer Couture", file: "Spencer_Couture.MP4"},
+    {title: "Hey by If Anything", file: "Hey_by_If_Anything.mp4"},
+    {title: "Fun on Stage", file: "Fun_On_Stage.MP4"},
+    {title: "Sublime Cover Santeria", file: "Sublime_Cover_Santeria.MP4"}
+  ]
   
   buttons.forEach((b, i) => {
     b.addEventListener("click", () => {
-      video.innerHTML = `<video width="200" height="200" controls><source src="./videos/${videoArray[i]}" type="video/mp4" /></video>`
+      if (window.innerWidth <= 600) title.innerHTML = videoArray[i].title
+      video.innerHTML = `<video width="200" height="200" controls><source src="./videos/${videoArray[i].file}" type="video/mp4" /></video>`
     })
   })
 })

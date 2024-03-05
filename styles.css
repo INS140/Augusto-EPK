@@ -154,6 +154,11 @@ footer {
   align-items: center;
   gap: 1rem;
 
+  h2 {
+    display: none;
+    font-size: 1.25rem;
+  }
+
   video {
     height: 50vh;
     background-color: #000002;
