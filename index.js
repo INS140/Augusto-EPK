@@ -17,7 +17,7 @@ const aboutPage = `
   <h2>Notable Performances:</h2>
   <div class="lists">
     <ul class="places">
-      <li>Bellagio Big Money Slow tournaments</li>
+      <li>Bellagio Big Money Slot tournaments</li>
       <li>The Lounge at the Palms</li>
       <li>Spencer Couture Art Gallery</li>
       <li>Mandalay Bay</li>
